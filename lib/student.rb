@@ -57,8 +57,10 @@ class Student
     SQL
 
     students = DB[:conn].execute(sql)
-
-    
+    students_below_12 = []
+    students.each do |student|
+      students_below_12 << find_by_name(student[2])
+    end 
   end
 
   def save
