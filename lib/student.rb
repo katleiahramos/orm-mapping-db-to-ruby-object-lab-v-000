@@ -75,6 +75,8 @@ class Student
     FROM students
     LIMIT ?
     SQL
+
+    DB[:conn].execute(sql, x)
   end
 
   def save
