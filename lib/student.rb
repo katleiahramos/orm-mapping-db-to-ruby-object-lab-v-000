@@ -22,7 +22,11 @@ class Student
     SQL
 
     all_students = DB[:conn].execute(sql)
-    binding.pry
+    all_students_arr = []
+    all_students.each do |student|
+      all_students_arr << find_by_name(student[1])
+    end
+    all_students_arr
   end
 
   def self.find_by_name(name)
