@@ -60,7 +60,8 @@ class Student
     students_below_12 = []
     students.each do |student|
       students_below_12 << find_by_name(student[2])
-    end 
+    end
+    students_below_12
   end
 
   def save
