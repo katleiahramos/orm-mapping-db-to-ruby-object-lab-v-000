@@ -81,6 +81,7 @@ class Student
 
   def self.first_student_in_grade_10
     student = first_X_students_in_grade_10(1)[0]
+    binding.pry
     find_by_name(student[1])
 
   end
