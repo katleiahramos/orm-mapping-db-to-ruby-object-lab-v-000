@@ -55,7 +55,7 @@ class Student
     FROM students
     WHERE grade < 12
     SQL
-    binding.pry
+
     students = DB[:conn].execute(sql)
     students_below_12 = []
     students.each do |student|
